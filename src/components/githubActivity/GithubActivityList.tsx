@@ -1,0 +1,65 @@
+import { Box } from "@mantine/core";
+import { useEffect, useState } from 'react'
+import { Octokit } from 'octokit'
+
+type Activity = {
+    repo: string,
+    commits: [],
+    URL: string,
+    createdAt: Date
+}
+
+type Props = {
+    user: string
+}
+
+const getGithubActivity = async(user:string) =>{
+    const octokit = new Octokit();
+    const gitActivity:Activity[] = [];
+
+    const res = await octokit.request('GET /users/{username}/events/public', {
+        username: user,
+        headers: {
+            'X-GitHub-Api-Version': '2022-11-28'
+        },
+        per_page:50
+    })
+
+    console.log(res)
+
+    res.data.forEach((x => {
+        if(x.type === "PushEvent"){
+            const activity = {
+                repo: x.repo.name,
+                //@ts-ignore
+                commits: x.payload.commits,
+                URL: `https://github.com/${x.repo.name}`,
+                createdAt: new Date(x.created_at!)
+            }
+            gitActivity.push(activity)
+        }
+    }))
+    console.log(gitActivity)
+    return gitActivity
+}
+const GithubActivityList = ({user}:Props):JSX.Element => {
+    const [gitActivity, setGitActivity] = useState<Activity[]>([])
+
+    useEffect(()=>{
+        const fetchData = async() => {
+            setGitActivity(await getGithubActivity(user))
+        }
+        fetchData()
+
+    },[])
+
+    return(
+        <>
+            <Box>
+                {gitActivity.map(item => (<a href={item.URL}>{item.repo}</a>))}
+            </Box>
+        </>
+    );
+}
+
+export default GithubActivityList
