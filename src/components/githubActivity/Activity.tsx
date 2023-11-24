@@ -1,3 +1,4 @@
+import { Anchor, Divider, Group, Paper, Text } from "@mantine/core"
 import { TActivity } from "../../types/types"
 
 type Props = {
@@ -6,7 +7,15 @@ type Props = {
 const Activity = ({activity}:Props):JSX.Element => {
     return(
         <>
-            <a href={activity.URL}>{activity.repo}</a>
+            <Paper shadow="xs" radius="md" withBorder p="xl">
+                <Group>
+                    <Text>
+                        Repo: <Anchor href={activity.URL}>{activity.repo}</Anchor>
+                    </Text>
+                    <Text>{activity.createdAt.toLocaleString()}</Text> 
+                </Group>
+                <Divider/>
+            </Paper>
         </>
     )
 }
