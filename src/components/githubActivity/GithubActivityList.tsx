@@ -1,13 +1,8 @@
 import { Box } from "@mantine/core";
 import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
-
-type Activity = {
-    repo: string,
-    commits: [],
-    URL: string,
-    createdAt: Date
-}
+import { TActivity } from "../../types/types";
+import Activity from "./Activity";
 
 type Props = {
     user: string
@@ -15,7 +10,7 @@ type Props = {
 
 const getGithubActivity = async(user:string) =>{
     const octokit = new Octokit();
-    const gitActivity:Activity[] = [];
+    const gitActivity:TActivity[] = [];
 
     const res = await octokit.request('GET /users/{username}/events/public', {
         username: user,
@@ -43,7 +38,7 @@ const getGithubActivity = async(user:string) =>{
     return gitActivity
 }
 const GithubActivityList = ({user}:Props):JSX.Element => {
-    const [gitActivity, setGitActivity] = useState<Activity[]>([])
+    const [gitActivity, setGitActivity] = useState<TActivity[]>([])
 
     useEffect(()=>{
         const fetchData = async() => {
@@ -56,7 +51,7 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
     return(
         <>
             <Box>
-                {gitActivity.map(item => (<a href={item.URL}>{item.repo}</a>))}
+                {gitActivity.map(activity => (<Activity activity={activity}/>))}
             </Box>
         </>
     );
