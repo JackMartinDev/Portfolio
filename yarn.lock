@@ -1746,11 +1746,6 @@ lru-cache@^6.0.0:
   dependencies:
     yallist "^4.0.0"
 
-mantine-flagpack@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/mantine-flagpack/-/mantine-flagpack-4.0.0.tgz#7922eb754cecbdbc8ea556060c247395d7d7c15f"
-  integrity sha512-qPV4XJt2YB11i0Ps+C+yV1ULEBEPvnkq6i4bw9cKxjJsVVGGSjWlefTU8MYslkS5+g44bptvDRpsj6bBSWOVtQ==
-
 merge2@^1.3.0, merge2@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/merge2/-/merge2-1.4.1.tgz#4368892f885e907455a6fd7dc55c0c9d404990ae"
