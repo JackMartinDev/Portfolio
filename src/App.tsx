@@ -1,15 +1,21 @@
-import { Anchor } from '@mantine/core'
 import './App.css'
 import GithubActivityList from './components/githubActivity/GithubActivityList'
 import NavigationBar from './components/navigationBar/NavigationBar'
+import AboutMe from './components/aboutMe/AboutMe'
+import Contact from './components/contact/Contact'
+import Experience from './components/experience/Experience'
+import Projects from './components/projects/Projects'
 
 function App() {
 
     return (
         <>
             <NavigationBar/>
+            <AboutMe/>
+            <Experience/>
+            <Projects/>
+            <Contact/>
             <GithubActivityList user="JackMartinDev"/>
-            <Anchor id='contact' href="mailto:jackmartin.dev@gmail.com">Get in touch!</Anchor>
         </>
     )
 }
