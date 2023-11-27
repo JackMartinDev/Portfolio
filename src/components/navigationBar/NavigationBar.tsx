@@ -1,5 +1,6 @@
 import { Group, Anchor} from '@mantine/core'
 import classes from './NavigationBar.module.css'
+import LanguageSwitch from '../languageSwitch/LanguageSwitch';
 
 const links = [
     { link: '/', label: '01. About' },
@@ -30,6 +31,7 @@ const NavigationBar = ():JSX.Element => {
                         {items}
                     </Group>
                     <Anchor href="/resume/rakumo.pdf" target="_blank" type="application/pdf" >Resume</Anchor>
+                    <LanguageSwitch/>
                 </Group>
             </div>
         </header>

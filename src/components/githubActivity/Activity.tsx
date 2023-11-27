@@ -21,7 +21,7 @@ const Activity = ({activity}:Props):JSX.Element => {
             <Paper shadow="xs" radius="md" withBorder p="md" mb={10}>
                 <Group justify="space-between">
                     <Text>
-                        Repo: <Anchor href={activity.URL}>{activity.repo}</Anchor>
+                        Repo: <Anchor href={activity.URL} target="_blank">{activity.repo}</Anchor>
                     </Text>
                     <Text>{activity.createdAt.toLocaleString()}</Text> 
                 </Group>
