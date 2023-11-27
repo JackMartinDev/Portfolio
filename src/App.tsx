@@ -9,7 +9,7 @@ function App() {
         <>
             <NavigationBar/>
             <GithubActivityList user="JackMartinDev"/>
-            <Anchor href="mailto:jackmartin.dev@gmail.com">Get in touch!</Anchor>
+            <Anchor id='contact' href="mailto:jackmartin.dev@gmail.com">Get in touch!</Anchor>
         </>
     )
 }

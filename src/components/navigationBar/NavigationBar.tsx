@@ -3,10 +3,10 @@ import classes from './NavigationBar.module.css'
 import LanguageSwitch from '../languageSwitch/LanguageSwitch';
 
 const links = [
-    { link: '/', label: '01. About' },
-    { link: '/', label: '02. Experience' },
-    { link: '/', label: '03. Work' },
-    { link: '/', label: '04. Contact' },
+    { link: '/#about', label: '01. About' },
+    { link: '/#experience', label: '02. Experience' },
+    { link: '/#projects', label: '03. Projects' },
+    { link: '/#contact', label: '04. Contact' },
 ];
 const NavigationBar = ():JSX.Element => {
     const items = links.map((link) => (
@@ -14,7 +14,10 @@ const NavigationBar = ():JSX.Element => {
             key={link.label}
             href={link.link}
             className={classes.link}
-            onClick={(event) => event.preventDefault()}
+            onClick={(event) => {
+                event.preventDefault();
+                window.location.replace(link.link)
+            }}
         >
             {link.label}
         </a>
