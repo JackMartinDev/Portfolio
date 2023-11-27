@@ -1,4 +1,4 @@
-import { Box } from "@mantine/core";
+import { Box, Title } from "@mantine/core";
 import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
 import { TActivity } from "../../types/types";
@@ -50,7 +50,8 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
 
     return(
         <>
-            <Box>
+            <Box maw={500}>
+                <Title style={{"textAlign": "center"}}>Git Activity</Title>
                 {gitActivity.map(activity => (<Activity activity={activity}/>))}
             </Box>
         </>
