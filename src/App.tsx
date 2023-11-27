@@ -1,12 +1,12 @@
 import './App.css'
 import GithubActivityList from './components/githubActivity/GithubActivityList'
-import { Anchor } from '@mantine/core'
+import NavigationBar from './components/navigationBar/NavigationBar'
 
 function App() {
 
     return (
         <>
-            <Anchor href="../public/resume/rakumo.pdf" target="_blank" type="application/pdf" >Resume</Anchor>
+            <NavigationBar/>
             <GithubActivityList user="JackMartinDev"/>
         </>
     )

@@ -5,12 +5,11 @@ type Props = {
     activity: TActivity
 }
 const Activity = ({activity}:Props):JSX.Element => {
-
     const commits = activity.commits.map(commit => (<List.Item>{commit.message}</List.Item>))
 
     const commitDropdown = (
         <Accordion.Item value="Commits">
-            <Accordion.Control >Commits</Accordion.Control>
+            <Accordion.Control px={8}>Commits</Accordion.Control>
             <Accordion.Panel>
                 <List type="ordered">{commits}</List>
             </Accordion.Panel>
@@ -19,7 +18,7 @@ const Activity = ({activity}:Props):JSX.Element => {
 
     return(
         <>
-            <Paper shadow="xs" radius="md" withBorder p="md">
+            <Paper shadow="xs" radius="md" withBorder p="md" mb={10}>
                 <Group justify="space-between">
                     <Text>
                         Repo: <Anchor href={activity.URL}>{activity.repo}</Anchor>
