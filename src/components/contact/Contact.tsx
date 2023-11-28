@@ -1,10 +1,10 @@
-import { Anchor, Container, Title } from "@mantine/core"
-
+import { Button, Container, Title } from "@mantine/core"
+import classes from "./Contact.module.css"
 const Contact = ():JSX.Element => {
     return(
         <Container id="contact" h={500}>
-            <Title>Contact</Title>
-            <Anchor href="mailto:jackmartin.dev@gmail.com">Get in touch!</Anchor>
+            <Title className={classes.title}>Contact</Title>
+            <Button component="a" href="mailto:jackmartin.dev@gmail.com">Get in touch!</Button>
         </Container>
     )
 }

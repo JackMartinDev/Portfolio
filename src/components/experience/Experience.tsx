@@ -27,7 +27,7 @@ const Experience = ():JSX.Element => {
     ));
     return(
         <Container id="experience" h={500}>
-            <Title mb="sm">Experience</Title>
+            <Title className={classes.title} mb="sm">Experience</Title>
             <Group style={{"alignItems": "normal", "flexWrap": "nowrap"}} >
                 <Box w="200">
                     {items}

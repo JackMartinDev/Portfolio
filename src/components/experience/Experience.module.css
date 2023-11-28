@@ -51,7 +51,14 @@ li{
 }
 
 li::before{
-    content: "▹";
+    content: "🢖";
     position: absolute;
+    font-size: 20px;
     left: 0px;
+}
+
+
+.title::before {
+    content: "02.";
+    margin-right: 15px;
 }
