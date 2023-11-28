@@ -1,4 +1,4 @@
-import { Group, Anchor} from '@mantine/core'
+import { Group, Anchor } from '@mantine/core'
 import classes from './NavigationBar.module.css'
 import LanguageSwitch from '../languageSwitch/LanguageSwitch';
 
