@@ -3,16 +3,22 @@ import cx from 'clsx';
 import { useState } from "react";
 import classes from "./Experience.module.css"
 
-const experience = [
+const experienceTabs = [
   { label: 'Workplace 1', order: 1 },
   { label: 'Workplace 2', order: 1 },
   { label: 'Workplace 3', order: 1 },
 ];
 
+const experiences = [
+     ["Job 1 Details 1", "Job 1 Details 2"],
+     ["Job 2 Details 1", "Job 2 Details 2"],
+     ["Job 3 Details 1", "Job 3 Details 2", "Job 3 Details 3"],
+]
+
 const Experience = ():JSX.Element => {
     const [active, setActive] = useState(0);
 
-    const items = experience.map((item, index) => (
+    const tabs = experienceTabs.map((item, index) => (
         <Box
             onClick={(event) => {
                 event.preventDefault();
@@ -25,12 +31,13 @@ const Experience = ():JSX.Element => {
             {item.label}
         </Box>
     ));
+
     return(
         <Container id="experience" mb={200} size={800}>
             <Title className={classes.title} mb="sm">Experience</Title>
             <Group style={{"alignItems": "normal", "flexWrap": "nowrap"}} >
                 <Box>
-                    {items}
+                    {tabs}
                 </Box>
                 <div>
                     <h3>
@@ -47,15 +54,7 @@ const Experience = ():JSX.Element => {
                     </p>
                     <div>
                         <ul className={classes.list}>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, sequi iste perspiciatis quas nesciunt aliquid commodi error doloremque minima corporis dolores repudianda.
-                            </li>
-                            <li>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi quas autem iure quam, cumque expedita maiores distinctio nulla delectus corrupti! Maior.
-                            </li>
-                            <li>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, quo maxime? In aut quisquam quia laboriosam ullam eius iste, doloribus, id perspici?
-                            </li>
+                            {experiences[active].map(item => (<li>{item}</li>))}
                         </ul>
                     </div>
                 </div>
