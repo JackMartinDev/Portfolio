@@ -1,4 +1,4 @@
-import { Box, ScrollArea, Title } from "@mantine/core";
+import { Box, ScrollArea, Title, Container } from "@mantine/core";
 import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
 import { TActivity } from "../../types/types";
@@ -50,12 +50,12 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
 
     return(
         <>
-            <Box maw={500}>
-                <Title pb={8} style={{"textAlign": "center"}}>Git Activity</Title>
+            <Container size={800}>
+                <Title pb={8} >Git Activity</Title>
                 <ScrollArea h={500} w={500} offsetScrollbars>
                     {gitActivity.map(activity => (<Activity activity={activity}/>))}
                 </ScrollArea>
-            </Box>
+            </Container>
         </>
     );
 }

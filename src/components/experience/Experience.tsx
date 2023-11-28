@@ -20,16 +20,16 @@ const Experience = ():JSX.Element => {
             }}
             key={item.label}
             className={cx(classes.link, { [classes.linkActive]: active === index })}
-            style={{ paddingLeft: `calc(${item.order} * var(--mantine-spacing-md))` }}
+            style={{ paddingLeft: `calc(${item.order} * var(--mantine-spacing-md))`, minWidth: 120 }}
         >
             {item.label}
         </Box>
     ));
     return(
-        <Container id="experience" h={500}>
+        <Container id="experience" mb={200} size={800}>
             <Title className={classes.title} mb="sm">Experience</Title>
             <Group style={{"alignItems": "normal", "flexWrap": "nowrap"}} >
-                <Box w="200">
+                <Box>
                     {items}
                 </Box>
                 <div>
@@ -46,7 +46,7 @@ const Experience = ():JSX.Element => {
                         October - December 2020
                     </p>
                     <div>
-                        <ul>
+                        <ul className={classes.list}>
                             <li>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, sequi iste perspiciatis quas nesciunt aliquid commodi error doloremque minima corporis dolores repudianda.
                             </li>
