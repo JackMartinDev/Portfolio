@@ -1,4 +1,12 @@
+
 .title::before {
     content: "01.";
     margin-right: 15px;
+}
+
+.terminal {
+    position: absolute;
+    right: -150px;
+    opacity: 0.5;
+    z-index: -1;
 }

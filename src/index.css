@@ -1,0 +1,31 @@
+*,
+*::before,
+*::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+html { 
+    scroll-behavior: smooth;
+
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #41c7d9;
+        border-radius: 30px;
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+
+

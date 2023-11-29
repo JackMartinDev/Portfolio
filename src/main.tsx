@@ -1,8 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
-import './index.css'
 import '@mantine/core/styles.css';
+import './index.css'
 import { MantineProvider, createTheme } from '@mantine/core';
 
 const theme = createTheme({})

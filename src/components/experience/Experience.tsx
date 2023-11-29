@@ -26,7 +26,7 @@ const Experience = ():JSX.Element => {
             }}
             key={item.label}
             className={cx(classes.link, { [classes.linkActive]: active === index })}
-            style={{ paddingLeft: `calc(${item.order} * var(--mantine-spacing-md))`, minWidth: 120 }}
+            style={{ paddingLeft: `calc(${item.order} * var(--mantine-spacing-md))`, minWidth: 150 }}
         >
             {item.label}
         </Box>
