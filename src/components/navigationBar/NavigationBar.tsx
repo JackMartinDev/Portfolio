@@ -40,11 +40,10 @@ const NavigationBar = ():JSX.Element => {
                     <a href="/resume/rakumo.pdf" target="_blank" type="application/pdf" className={classes.link}>
                         {t("resume")}
                     </a>
-                    <button className={classes.lang}>
+                    <button className={classes.lang} onClick={changeLanguage}>
                         <img 
                             className={classes.lang__img} 
                             src={i18next.language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}
-                            onClick={changeLanguage} 
                             aria-label="Toggle language"
                         />
                     </button>
