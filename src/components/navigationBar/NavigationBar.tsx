@@ -12,9 +12,9 @@ const NavigationBar = ():JSX.Element => {
         { link: '#contact', label: `04. ${t("contact")}`},
     ];
 
-    const items = links.map((link) => (
+    const items = links.map((link, index) => (
         <a
-            key={link.label}
+            key={index}
             href={link.link}
             className={ classes.link}
             onClick={(event) => {
@@ -37,7 +37,7 @@ const NavigationBar = ():JSX.Element => {
             <div className={classes.inner}>
                 <nav>
                     {items}
-                    <a href="/resume/rakumo.pdf" target="_blank" type="application/pdf" className={classes.link}>
+                    <a href="/resume/rakumo.pdf"  target="_blank" type="application/pdf" className={classes.link}>
                         {t("resume")}
                     </a>
                     <button className={classes.lang} onClick={changeLanguage}>
