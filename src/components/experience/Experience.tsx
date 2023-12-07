@@ -2,6 +2,7 @@ import { Container, Title, Box, Group } from "@mantine/core"
 import cx from 'clsx';
 import { useState } from "react";
 import classes from "./Experience.module.css"
+import { useTranslation } from "react-i18next";
 
 const experienceTabs = [
   { label: 'Workplace 1', order: 1 },
@@ -17,6 +18,7 @@ const experiences = [
 
 const Experience = ():JSX.Element => {
     const [active, setActive] = useState(0);
+    const {t} = useTranslation();
 
     const tabs = experienceTabs.map((item, index) => (
         <Box
@@ -34,7 +36,7 @@ const Experience = ():JSX.Element => {
 
     return(
         <Container id="experience" mb={200} size={800}>
-            <Title className={classes.title} mb="sm">Experience</Title>
+            <Title className={classes.title} mb="sm">{t("experience")}</Title>
             <Group style={{"alignItems": "normal", "flexWrap": "nowrap"}} >
                 <Box>
                     {tabs}
