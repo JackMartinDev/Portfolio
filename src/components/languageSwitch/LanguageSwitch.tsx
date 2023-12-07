@@ -12,7 +12,7 @@ function LanguageSwitch() {
                 size="xl"
                 aria-label="Toggle color scheme"
             >
-                <Image src={language === "jp" ? "icons/GB.png" : "/icons/JP.png"}/>
+                <Image src={language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}/>
             </ActionIcon>
         </Group>)
 }

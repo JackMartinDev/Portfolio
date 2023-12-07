@@ -2,27 +2,31 @@
 *::before,
 *::after{
 	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+    padding: 0;
+    box-sizing: border-box;
 }
-
 
 html { 
     scroll-behavior: smooth;
+    scroll-padding: 10vh;
 
-    ::-webkit-scrollbar {
-        width: 8px;
-    }
-
-    ::-webkit-scrollbar-track {
-        background: transparent;
-    }
-
-    ::-webkit-scrollbar-thumb {
-        background: #41c7d9;
-        border-radius: 30px;
-    }
+    /* For Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: #495670 #0a192f;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+::-webkit-scrollbar-track {
+    background: #0a192f;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #495670;
+    border: 3px solid #0a192f;
+    border-radius: 10px;
+}
+
 
 body{
     overflow-x: hidden;
