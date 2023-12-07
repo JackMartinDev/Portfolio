@@ -1,5 +1,5 @@
 import classes from './NavigationBar.module.css'
-import LanguageSwitch from '../languageSwitch/LanguageSwitch';
+import { useState } from 'react';
 
 const links = [
     { link: '#about', label: '01. About' },
@@ -8,6 +8,7 @@ const links = [
     { link: '#contact', label: '04. Contact' },
 ];
 const NavigationBar = ():JSX.Element => {
+    const [language, setLanguage] = useState("en")
     const items = links.map((link) => (
         <a
             key={link.label}
@@ -30,7 +31,14 @@ const NavigationBar = ():JSX.Element => {
                     <a href="/resume/rakumo.pdf" target="_blank" type="application/pdf" className={classes.link}>
                         Resume
                     </a>
-                    <LanguageSwitch/>
+                    <button className={classes.lang}>
+                        <img 
+                            className={classes.lang__img} 
+                            src={language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}
+                            onClick={() => setLanguage(language === 'en' ? 'jp' : 'en')}
+                            aria-label="Toggle language"
+                        />
+                    </button>
                 </nav>
             </div>
         </header>
