@@ -6,6 +6,12 @@
     box-sizing: border-box;
 }
 
+:root{
+    --font-sans: 'Calibre', 'Inter', 'San Francisco', 'SF Pro Text', -apple-system, system-ui,
+      sans-serif;
+    --font-mono: 'SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', monospace;
+}
+
 html { 
     scroll-behavior: smooth;
     scroll-padding: 10vh;

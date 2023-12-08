@@ -3,7 +3,7 @@ import cx from 'clsx';
 import { useState } from "react";
 import classes from "./Experience.module.css"
 import { useTranslation } from "react-i18next";
-
+import globalClasses from "../../global.module.css"
 const experienceTabs = [
   { label: 'Workplace 1', order: 1 },
   { label: 'Workplace 2', order: 1 },
@@ -36,7 +36,7 @@ const Experience = ():JSX.Element => {
 
     return(
         <Container id="experience" mb={200} size={800}>
-            <Title className={classes.title} mb="sm">{t("experience")}</Title>
+            <Title className={`${classes.title} ${globalClasses.sectionTitle}`} mb="sm">{t("experience")}</Title>
             <Group style={{"alignItems": "normal", "flexWrap": "nowrap"}} >
                 <Box>
                     {tabs}

@@ -1,4 +1,5 @@
 .header {
+    font-family: var(--font-mono);
     height: rem(56px);
     margin-top: 1.5rem;
     margin-bottom: rem(120px);

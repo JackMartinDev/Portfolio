@@ -3,5 +3,6 @@ export const translationsEn = {
     experience: "Experience",
     projects: "Projects",
     contact: "Contact",
-    resume: "Resume"
+    resume: "Resume",
+    companyLink: "https://www.lanex.co.jp/en",
 };
