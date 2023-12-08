@@ -8,7 +8,7 @@ const Hero = () =>{
             <h1 className={classes.title}>Hi, my name is</h1>
             <h2 className={classes.name}>Jack Martin</h2>
             <h3 className={classes.subtitle}>I build things for the web.</h3>
-            <p className={classes.intro}>I’m a software engineer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I’m focused on building accessible, human-centered products at <a href={t("companyLink")} target="_blank">Lanex</a>.</p>
+            <p className={classes.intro}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi nemo aliquam dicta tenetur repudiandae harum esse ex assumenda rerum quasi aspernatur, incidunt tempora natus id voluptatem. Consequuntur ullam quos reiciendis at <a href={t("companyLink")} target="_blank">Lanex</a>.</p>
         </section>
     )
 }
