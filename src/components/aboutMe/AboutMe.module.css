@@ -1,6 +1,22 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.about{
+    margin-bottom: 500px;    
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+}
+
 .title{
     display: flex;
     align-items: center;
+    font-size: 2rem;
 }
 
 .title::before {
@@ -17,6 +33,37 @@
     height: 1px;
     margin-left: 20px;
     background-color: red;
+}
+
+.aboutContainer{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+
+    p{
+        margin-bottom: 1rem;
+    }
+}
+
+
+.skills{
+    display: grid;
+    grid-template-columns: repeat(2,minmax(120px, 200px));
+    gap: 15px;
+    list-style: none;
+
+    li{
+        position: relative;
+        padding-left: 20px;
+    }
+
+    li::before{
+        content: "🢖";
+        position: absolute;
+        font-size: 20px;
+        left: 0px;
+        line-height: 20px;
+    }
 }
 
 .terminal {

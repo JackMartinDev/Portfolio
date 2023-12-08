@@ -44,7 +44,7 @@ p{
 
     li{
         position: relative;
-        padding-left: 30px;
+        padding-left: 20px;
         margin-bottom: 10px;
     }
 
@@ -53,6 +53,7 @@ p{
         position: absolute;
         font-size: 20px;
         left: 0px;
+        line-height: 20px;
     }
 }
 
