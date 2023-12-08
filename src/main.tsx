@@ -6,24 +6,10 @@ import './index.css'
 import { MantineProvider, createTheme } from '@mantine/core';
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import { translationsEn } from "./translations/en"
+import { translationsJp } from "./translations/jp"
 
 const theme = createTheme({})
-
-const translationsEn = { 
-    aboutMe: "About",
-    experience: "Experience",
-    projects: "Projects",
-    contact: "Contact",
-    resume: "Resume"
-};
-const translationsJp = { 
-    aboutMe: "僕のこと",
-    experience: "経験",
-    projects: "プロジェクト",
-    contact: "連絡",
-    resume: "履歴書"
-};
-
 
 i18next.use(initReactI18next).init({
     resources:{
