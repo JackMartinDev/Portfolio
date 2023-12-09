@@ -37,7 +37,7 @@ const NavigationBar = ():JSX.Element => {
             <div className={classes.inner}>
                 <nav>
                     {items}
-                    <a href="/resume/resume.pdf"  target="_blank" type="application/pdf" className={classes.link}>
+                    <a href="/resume.pdf"  target="_blank" type="application/pdf" className={classes.link}>
                         {t("resume")}
                     </a>
                     <button className={classes.lang} onClick={changeLanguage}>
