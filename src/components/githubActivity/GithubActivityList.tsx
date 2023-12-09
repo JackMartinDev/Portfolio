@@ -1,4 +1,4 @@
-import { Box, ScrollArea, Title, Container } from "@mantine/core";
+import { ScrollArea, Title, Container } from "@mantine/core";
 import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
 import { TActivity } from "../../types/types";
