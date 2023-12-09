@@ -1,4 +1,29 @@
+.projects{
+    margin-bottom: 500px;    
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+}
+
 .title::before {
     content: "03.";
     margin-right: 15px;
+}
+
+.details{
+    text-align: right;
+}
+
+.desc{
+    background-color: blueviolet;
+    max-width: 50ch;
+    margin-left: auto;
+    padding: 12px;
+}
+
+.skills{
+    display: flex;
+    justify-content: right;
+    gap: 1.5rem;
+    list-style: none;
 }
