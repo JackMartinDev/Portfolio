@@ -1,4 +1,28 @@
+.contact{
+    margin-bottom: 500px;    
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+    text-align: center;
+}
+
 .title::before {
     content: "04.";
     margin-right: 15px;
+}
+
+.text{
+    max-width: 60ch;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+
+}
+
+.button{
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid black;
+    color: black;
+    padding: 1em;
+    border-radius: 4px;
 }
