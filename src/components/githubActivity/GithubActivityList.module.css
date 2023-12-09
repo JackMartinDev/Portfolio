@@ -1,1 +1,17 @@
-*{}
+.github{
+    margin-bottom: 500px;    
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+}
+
+.title{
+    font-size: 2rem;
+}
+
+.scrollArea{
+    width: 500px;
+    height: 500px;
+    overflow-y: scroll;
+    padding-right: 3px;
+}

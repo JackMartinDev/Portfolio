@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
 import { TActivity } from "../../types/types";
 import Activity from "./Activity";
+import classes from "./GithubActivityList.module.css"
 
 type Props = {
     user: string
@@ -49,14 +50,12 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
     },[])
 
     return(
-        <>
-            <Container size={800}>
-                <Title pb={8} >Git Activity</Title>
-                <ScrollArea h={500} w={500} offsetScrollbars>
-                    {gitActivity.map(activity => (<Activity activity={activity}/>))}
-                </ScrollArea>
-            </Container>
-        </>
+        <section className={classes.github}>
+            <h3 className={classes.title}>Git Activity</h3>
+            <div className={classes.scrollArea}>
+                {gitActivity.map(activity => (<Activity activity={activity}/>))}
+            </div>
+        </section>
     );
 }
 
