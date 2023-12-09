@@ -1,3 +1,16 @@
+.experience{
+    margin-bottom: 500px;    
+    margin-left: 200px;
+    margin-right: 200px;
+    max-width: 900px;
+}
+
+.wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+}
+
 .link {
     display: block;
     text-decoration: none;
@@ -8,32 +21,39 @@
     border-top-right-radius: var(--mantine-radius-sm);
     border-bottom-right-radius: var(--mantine-radius-sm);
     border-left: rem(2px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    height: 45px;
 
-    @mixin hover {
-        cursor: pointer;
-        background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
-        transition: background-color 600ms ease;
-    }
+}
+
+.link:hover {
+    cursor: pointer;
+    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    transition: background-color 600ms ease;
+}
+
+.tabs{
+    position: relative;
+}
+
+.selected{
+    position: absolute;
+    top: 0;
+    width: 2px;
+    height: 45px;
+    background-color: red;
+    transition: transform 0.3s ease;
+
 }
 
 
 .linkActive {
-    border-left-color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
+    transition: border-left-;
     color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
 
     &,
     &:hover {
         background-color: var(--mantine-color-blue-light) !important;
     }
-}
-
-h3 {
-    margin-bottom: 8px;
-    margin-top: 8px;
-}
-
-p{
-    margin-top: 0px;
 }
 
 .list{
@@ -49,12 +69,32 @@ p{
     }
 
     li::before{
-        content: "🢖";
+        content: "⇾";
         position: absolute;
         font-size: 20px;
         left: 0px;
         line-height: 20px;
     }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.jobInfo{
+    max-width: 50ch;
+    display: none;
+}
+
+.active{
+    display: block;
+    animation: fadeIn 1s;
 }
 
 .title::before {

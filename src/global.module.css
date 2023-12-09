@@ -1,6 +1,8 @@
 .sectionTitle{
     display: flex;
     align-items: center;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
 }
 
 .sectionTitle::after{
