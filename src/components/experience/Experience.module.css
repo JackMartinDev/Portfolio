@@ -14,20 +14,19 @@
 .link {
     display: block;
     text-decoration: none;
-    color: var(--mantine-color-text);
     line-height: 1.7;
-    font-size: var(--mantine-font-size-sm);
-    padding: var(--mantine-spacing-xs);
-    border-top-right-radius: var(--mantine-radius-sm);
-    border-bottom-right-radius: var(--mantine-radius-sm);
-    border-left: rem(2px) solid light-dark(var(--mantine-color-gray-3), var(--mantine-color-dark-4));
+    font-size: 14px;
+    padding: 10px;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    border-left: 2px solid #dee2e6;
     height: 45px;
 
 }
 
 .link:hover {
     cursor: pointer;
-    background-color: light-dark(var(--mantine-color-gray-0), var(--mantine-color-dark-6));
+    background-color: #f8f9fa;
     transition: background-color 600ms ease;
 }
 
@@ -47,12 +46,11 @@
 
 
 .linkActive {
-    transition: border-left-;
-    color: light-dark(var(--mantine-color-blue-6), var(--mantine-color-blue-4));
+    color: #228be6;
 
     &,
     &:hover {
-        background-color: var(--mantine-color-blue-light) !important;
+        background-color: rgba(34,139,230,.1) !important;
     }
 }
 
