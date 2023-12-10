@@ -46,3 +46,12 @@
 .list{
     padding-left: 20px;
 }
+
+.icon{
+    transition: rotate 0.3s;
+}
+.toggle{
+    rotate: 180deg;
+}
+
+
