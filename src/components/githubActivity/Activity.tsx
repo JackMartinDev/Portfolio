@@ -1,37 +1,36 @@
-import { Anchor, Divider, Group, Paper, Text, Accordion, List } from "@mantine/core"
 import { TActivity } from "../../types/types"
+import classes from "./Activity.module.css"
+import { useState } from "react"
+import cx from "clsx"
 
 type Props = {
     activity: TActivity
 }
 const Activity = ({activity}:Props):JSX.Element => {
-    const commits = activity.commits.map(commit => (<List.Item>{commit.message}</List.Item>))
+    const [isToggled, setIsToggled] = useState(false);
+    const commits = activity.commits.map(commit => (<li>{commit.message}</li>))
 
-    const commitDropdown = (
-        <Accordion.Item value="Commits">
-            <Accordion.Control px={8}>Commits</Accordion.Control>
-            <Accordion.Panel>
-                <List type="ordered">{commits}</List>
-            </Accordion.Panel>
-        </Accordion.Item>
-    );
+    const toggle = () => {
+        setIsToggled(!isToggled)
+    }
 
     return(
-        <>
-            <Paper shadow="xs" radius="md" withBorder p="md" mb={10}>
-                <Group justify="space-between">
-                    <Text>
-                        Repo: <Anchor href={activity.URL} target="_blank">{activity.repo}</Anchor>
-                    </Text>
-                    <Text>{activity.createdAt.toLocaleString()}</Text> 
-                </Group>
-                <Divider/>
+        <div className={classes.container}>
+            <div className={classes.upper}>
+                <p>
+                    Repo: <a href={activity.URL} className={classes.link} target="_blank">{activity.repo}</a>
+                </p>
+                <p>{activity.createdAt.toLocaleString()}</p> 
+            </div>
 
-                <Accordion>
-                    {commitDropdown}
-                </Accordion>
-            </Paper>
-        </>
+            <div className={classes.accordion} onClick={toggle}>
+                <h3>Commits: {activity.commits.length}</h3>
+                <span>{isToggled ? "-" : "+"}</span>
+            </div>
+            <div className={cx(classes.content, {[classes.show]: isToggled})}>
+                <ol className={classes.list}>{commits}</ol>
+            </div>
+        </div>
     )
 }
 

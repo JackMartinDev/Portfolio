@@ -1,4 +1,3 @@
-import { ScrollArea, Title, Container } from "@mantine/core";
 import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
 import { TActivity } from "../../types/types";
@@ -20,8 +19,6 @@ const getGithubActivity = async(user:string) =>{
         },
         per_page:20
     })
-
-    console.log(res)
 
     res.data.forEach((x => {
         if(x.type === "PushEvent"){
