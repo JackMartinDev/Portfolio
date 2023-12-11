@@ -48,7 +48,7 @@ const NavigationBar = ():JSX.Element => {
                     />
                 </button>
             </nav>
-            <IconMenu2 size={30} className={classes.burger}/>
+            <IconMenu2 size={40} className={classes.burger}/>
         </header>
     );
 }

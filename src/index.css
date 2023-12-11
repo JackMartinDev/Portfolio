@@ -27,7 +27,7 @@
 
 html { 
     scroll-behavior: smooth;
-    scroll-padding: 10vh;
+    scroll-padding: 12vh;
 
     /* For Firefox */
     scrollbar-width: thin;
