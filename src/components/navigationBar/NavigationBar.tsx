@@ -34,8 +34,7 @@ const NavigationBar = ():JSX.Element => {
 
     return (
         <div className='container'>
-        <header className={classes.header}>
-            <div className={classes.inner}>
+            <header className={classes.header}>
                 <nav>
                     {items}
                     <a href="/resume.pdf" target="_blank" type="application/pdf" className={classes.link}>
@@ -49,8 +48,7 @@ const NavigationBar = ():JSX.Element => {
                         />
                     </button>
                 </nav>
-            </div>
-        </header>
+            </header>
         </div>
     );
 }
