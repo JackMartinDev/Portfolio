@@ -40,7 +40,7 @@ const Experience = ():JSX.Element => {
             <div className={classes.wrapper} >
                 <div className={classes.tabs}>
                     {tabs}
-                    <div className={classes.selected} style={{transform: `translateY(${active * 45}px)`}}></div>
+                    <div className={classes.selected} style={{transform: `translateX(${active * 150}px)`}}></div>
                 </div>
 
 
