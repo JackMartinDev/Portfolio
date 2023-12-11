@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import classes from './NavigationBar.module.css'
 import i18next from 'i18next';
+import { IconMenu2 } from '@tabler/icons-react';
 
 const NavigationBar = ():JSX.Element => {
     const { t } = useTranslation()
@@ -33,23 +34,22 @@ const NavigationBar = ():JSX.Element => {
     }
 
     return (
-        <div className='container'>
-            <header className={classes.header}>
-                <nav>
-                    {items}
-                    <a href="/resume.pdf" target="_blank" type="application/pdf" className={classes.link}>
-                        {t("resume")}
-                    </a>
-                    <button className={classes.lang} onClick={changeLanguage}>
-                        <img 
-                            className={classes.lang__img} 
-                            src={i18next.language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}
-                            aria-label="Toggle language"
-                        />
-                    </button>
-                </nav>
-            </header>
-        </div>
+        <header className={classes.header}>
+            <nav className={classes.menu}>
+                {items}
+                <a href="/resume.pdf" target="_blank" type="application/pdf" className={classes.link}>
+                    {t("resume")}
+                </a>
+                <button className={classes.lang} onClick={changeLanguage}>
+                    <img 
+                        className={classes.lang__img} 
+                        src={i18next.language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}
+                        aria-label="Toggle language"
+                    />
+                </button>
+            </nav>
+            <IconMenu2 size={30} className={classes.burger}/>
+        </header>
     );
 }
 

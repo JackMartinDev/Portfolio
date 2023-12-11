@@ -98,3 +98,17 @@
     content: "02.";
     margin-right: 15px;
 }
+
+@media (max-width: 640px){
+    .wrapper{
+        flex-direction: column;
+    }
+    .tabs{
+        display: flex;
+        flex-direction: row;
+    }
+    .link{
+        border-left: none;
+        border-bottom: 2px solid #dee2e6;
+    }
+}

@@ -59,9 +59,6 @@
     position: relative;
 }
 
-.image{
-    position: absolute;
-}
 
 @media (max-width: 1536px){
 }
@@ -75,6 +72,11 @@
 @media (max-width: 768px){
     .aboutContainer{
         display: block;
+    }
+    .image{
+        margin-top: 2.5rem;
+        display: flex;
+        justify-content: center;
     }
 }
 

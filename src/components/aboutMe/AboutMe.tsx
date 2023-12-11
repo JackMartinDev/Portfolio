@@ -23,7 +23,9 @@ const AboutMe = ():JSX.Element => {
                         <li>Godot</li>
                     </ul>
                 </div>
-                <div><img src="https://i.stack.imgur.com/34AD2.jpg" alt="Self Image" width={240} height={240}/></div>
+                <div className={classes.image}>
+                    <img src="https://i.stack.imgur.com/34AD2.jpg" alt="Self Image" width={240} height={240}/>
+                </div>
             </div>
         </section>
     )
