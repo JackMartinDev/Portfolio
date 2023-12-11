@@ -2,7 +2,6 @@ import cx from 'clsx';
 import { useState } from "react";
 import classes from "./Experience.module.css"
 import { useTranslation } from "react-i18next";
-import globalClasses from "../../global.module.css"
 
 const experiences = [
      ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eaque laboriosam, consequuntur odio illo voluptate nobis ut, animi reprehenderit nemo doloremque harum praesentium architecto voluptas nam! Saepe similique cupiditate vitae?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. In incidunt repudiandae laboriosam odio eaque minima exercitationem voluptates totam non debitis repellendus porro facere, amet rem veniam pariatur obcaecati ut aliquam.",
@@ -37,7 +36,7 @@ const Experience = ():JSX.Element => {
 
     return(
         <section className={classes.experience} id="experience">
-            <h3 className={`${classes.title} ${globalClasses.sectionTitle}`}>{t("experience")}</h3>
+            <h3 className={cx(classes.title, "sectionTitle")}>{t("experience")}</h3>
             <div className={classes.wrapper} >
                 <div className={classes.tabs}>
                     {tabs}

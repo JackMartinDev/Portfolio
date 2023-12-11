@@ -1,7 +1,9 @@
 import React, { Suspense } from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
+import './reset.css'
 import './index.css'
+import "./utils.css"
 import i18next from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import { translationsEn } from "./translations/en"

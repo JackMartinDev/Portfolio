@@ -1,6 +1,5 @@
 import classes from "./Projects.module.css"
 import { useTranslation } from "react-i18next"
-import globalClasses from "../../global.module.css"
 import cx from "clsx"
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react"
 
@@ -8,7 +7,7 @@ const Projects = ():JSX.Element => {
     const {t} =useTranslation();
     return(
         <section className={classes.projects} id="projects">
-            <h3 className={cx(classes.title, globalClasses.sectionTitle)}>{t("projects")}</h3>
+            <h3 className={cx(classes.title, "sectionTitle")}>{t("projects")}</h3>
             <div className={classes.container}>
                 <img src="https://i.stack.imgur.com/34AD2.jpg" className={classes.image} alt="" />
                 <div className={classes.details}>

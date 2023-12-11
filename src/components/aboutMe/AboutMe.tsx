@@ -1,5 +1,4 @@
 import classes from "./AboutMe.module.css"
-import globalClasses from "../../global.module.css"
 import { useTranslation } from "react-i18next"
 
 //<img className={classes.terminal} src="terminal.PNG"/>
@@ -7,7 +6,7 @@ const AboutMe = ():JSX.Element => {
     const {t} = useTranslation()
     return(
         <section className={classes.about} id="about">    
-            <h3 className={`${classes.title} ${globalClasses.sectionTitle}`}>{t("aboutMe")}</h3>
+            <h3 className={`${classes.title} sectionTitle`}>{t("aboutMe")}</h3>
             <div className={classes.aboutContainer}>
                 <div>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit tempore natus assumenda molestias sequi officiis corrupti illo amet qui. Adipisci facere perferendis impedit accusantium. Nesciunt culpa ratione maxime provident modi!
