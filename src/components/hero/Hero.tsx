@@ -1,10 +1,10 @@
 import classes from "./Hero.module.css"
 import { useTranslation } from "react-i18next";
-
+import cx from "clsx"
 const Hero = () =>{
     const {t} = useTranslation();
     return(
-        <section className={classes.hero} id= "hero">
+        <section className={cx(classes.hero, "container")} id= "hero">
             <h1 className={classes.title}>Hi, my name is</h1>
             <h2 className={classes.name}>Jack Martin</h2>
             <h3 className={classes.subtitle}>I build things for the web.</h3>

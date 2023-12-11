@@ -21,9 +21,9 @@
     grid-template-columns: 3fr 2fr;
     gap: 50px;
 
-    p{
-        margin-bottom: 1rem;
-    }
+}
+.aboutContainer p{
+    margin-bottom: 1rem;
 }
 
 
@@ -32,20 +32,21 @@
     grid-template-columns: repeat(2,minmax(120px, 200px));
     gap: 15px;
     list-style: none;
-
-    li{
-        position: relative;
-        padding-left: 20px;
-    }
-
-    li::before{
-        content: "⇾";
-        position: absolute;
-        font-size: 20px;
-        left: 0px;
-        line-height: 20px;
-    }
 }
+
+.skills li{
+    position: relative;
+    padding-left: 20px;
+}
+
+.skills li::before{
+    content: "⇾";
+    position: absolute;
+    font-size: 20px;
+    left: 0px;
+    line-height: 20px;
+}
+
 
 .terminal {
     position: absolute;

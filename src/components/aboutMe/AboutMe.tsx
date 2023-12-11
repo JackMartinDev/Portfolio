@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next"
 const AboutMe = ():JSX.Element => {
     const {t} = useTranslation()
     return(
-        <section className={classes.about} id="about">    
+        <section className="container" id="about">    
             <h3 className={`${classes.title} sectionTitle`}>{t("aboutMe")}</h3>
             <div className={classes.aboutContainer}>
                 <div>
@@ -23,7 +23,7 @@ const AboutMe = ():JSX.Element => {
                         <li>Godot</li>
                     </ul>
                 </div>
-                <div><img src="https://i.stack.imgur.com/34AD2.jpg" alt="Self Image" /></div>
+                <div><img src="https://i.stack.imgur.com/34AD2.jpg" alt="Self Image" width={240} height={240}/></div>
             </div>
         </section>
     )

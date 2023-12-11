@@ -6,7 +6,7 @@ import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react"
 const Projects = ():JSX.Element => {
     const {t} =useTranslation();
     return(
-        <section className={classes.projects} id="projects">
+        <section className={cx(classes.projects, "container")} id="projects">
             <h3 className={cx(classes.title, "sectionTitle")}>{t("projects")}</h3>
             <div className={classes.container}>
                 <img src="https://i.stack.imgur.com/34AD2.jpg" className={classes.image} alt="" />

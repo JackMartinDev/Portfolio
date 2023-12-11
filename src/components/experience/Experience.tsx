@@ -35,7 +35,7 @@ const Experience = ():JSX.Element => {
     ));
 
     return(
-        <section className={classes.experience} id="experience">
+        <section className={cx(classes.experience, "container")} id="experience">
             <h3 className={cx(classes.title, "sectionTitle")}>{t("experience")}</h3>
             <div className={classes.wrapper} >
                 <div className={classes.tabs}>
