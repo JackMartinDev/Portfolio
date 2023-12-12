@@ -10,6 +10,8 @@
     line-height: 1.7;
     font-size: 14px;
     padding: 10px;
+    padding-left: 15px;
+    min-width: 150px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
     border-left: 2px solid #dee2e6;
@@ -28,12 +30,16 @@
 }
 
 .selected{
+    --size: 45px;
+    --data-index:0;
     position: absolute;
     top: 0;
     width: 2px;
     height: 45px;
     background-color: red;
+    transform: translateY(calc(var(--size) * var(--data-index)));
     transition: transform 0.3s ease;
+
 }
 
 
@@ -99,18 +105,24 @@
     .wrapper{
         flex-direction: column;
     }
+
     .tabs{
         display: flex;
         flex-direction: row;
         overflow-y: hidden;
     }
+
     .link{
         border-left: none;
         border-bottom: 2px solid #dee2e6;
     }
+
     .selected{
         top: 43px;
         width: 150px;
         height: 2px;
+        --size: 150px;
+        transform: translateX(calc(var(--size) * var(--data-index)));
+
     }
 }

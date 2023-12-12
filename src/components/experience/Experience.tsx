@@ -28,7 +28,6 @@ const Experience = ():JSX.Element => {
             }}
             key={job.company}
             className={cx(classes.link, { [classes.linkActive]: active === index })}
-            style={{ minWidth: 150, paddingLeft: 15 }}
         >
             {job.company}
        </div>
@@ -40,7 +39,9 @@ const Experience = ():JSX.Element => {
             <div className={classes.wrapper} >
                 <div className={classes.tabs}>
                     {tabs}
-                    <div className={classes.selected} style={{transform: `translateX(${active * 150}px)`}}></div>
+                    <div className={classes.selected}
+                        style={{ "--data-index": active } as React.CSSProperties}>
+                    </div>
                 </div>
 
 
