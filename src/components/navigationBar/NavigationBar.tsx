@@ -7,10 +7,10 @@ const NavigationBar = ():JSX.Element => {
     const { t } = useTranslation()
 
     const links = [
-        { link: '#about', label: `01. ${t("aboutMe")}` },
-        { link: '#experience', label: `02. ${t("experience")}`},
-        { link: '#projects', label: `03. ${t("projects")}`},
-        { link: '#contact', label: `04. ${t("contact")}`},
+        { link: '#about', label: t("aboutMe") },
+        { link: '#experience', label: t("experience")},
+        { link: '#projects', label: t("projects")},
+        { link: '#contact', label: t("contact")},
     ];
 
     const items = links.map((link, index) => (
@@ -23,6 +23,7 @@ const NavigationBar = ():JSX.Element => {
                 window.location.replace(link.link)
             }}
         >
+            <span className={classes.accent}>{`0${index + 1}. `}</span>
             {link.label}
         </a>
     ));

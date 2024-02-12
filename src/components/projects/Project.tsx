@@ -16,12 +16,12 @@ const Project = ({project}: Props) => {
                 <ul className={classes.skills}>
                     {project.skills.map(skill => (<li>{skill}</li>))}
                 </ul>
-                <a href={project.url} target="_blank">
+                <a href={project.github} target="_blank">
                     <IconBrandGithub color="black" size={30} stroke={1.5}/>
                 </a>
-                <a href={project.url} target="_blank" style={{paddingLeft: "8px"}}>
+                {project.url && <a href={project.url} target="_blank" style={{paddingLeft: "8px"}}>
                     <IconExternalLink color="black" size={30} stroke={1.5}/>
-                </a>
+                </a>}
             </div>
         </>)
 }

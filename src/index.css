@@ -6,6 +6,11 @@
     scale: 1;
 
     /* Colors */
+    --background-color: #0A192F;
+    --title-color: #CCD6F6;
+    --sub-title-color: #8892B0;
+    --text-color: #717C98;
+    --accent-color: #60F3D1;
 
     /* Sizings */
     --size-xxs: 0.5rem;

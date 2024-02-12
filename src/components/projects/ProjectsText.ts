@@ -1,8 +1,8 @@
 export const projects = [
     {
-    title: "Project name",
-    description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim, atque a deserunt porro cumque aperiam incidunt minus nobis itaque in maiores illo ab id tempora voluptas sunt delectus perferendis reprehenderit.",
-    skills: ["Skill 1", "Skill 2", "Skill 3", "Skill 4"],
-    url: "https://github.com/JackMartinDev"
+    title: "Yuubin",
+    description: "Yuubin is a REST client that utilises the Tauri framework to provide a light weight desktop application. All information is stored locally on your device with no need for account creation.",
+    skills: ["React", "Rust", "Tauri", "Typescript", ""],
+    github: "https://github.com/JackMartinDev/Yuubin"
     },
 ]

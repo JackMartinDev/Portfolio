@@ -20,5 +20,6 @@ type Project = {
     title: string,
     description: string,
     skills: string[],
-    url: string
+    github: string,
+    url?: string
 }
