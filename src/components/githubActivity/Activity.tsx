@@ -1,4 +1,3 @@
-import { TActivity } from "../../types/types"
 import classes from "./Activity.module.css"
 import { useState } from "react"
 import { IconChevronDown } from "@tabler/icons-react"

@@ -9,10 +9,16 @@ type commit = {
     url: string
 }
 
-export type TActivity = {
+type TActivity = {
     repo: string,
     commits: commit[],
     URL: string,
     createdAt: Date
 }
 
+type Project = {
+    title: string,
+    description: string,
+    skills: string[],
+    url: string
+}

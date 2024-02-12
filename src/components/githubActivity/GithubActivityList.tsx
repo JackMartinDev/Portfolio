@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
-import { TActivity } from "../../types/types";
 import Activity from "./Activity";
 import classes from "./GithubActivityList.module.css"
 
