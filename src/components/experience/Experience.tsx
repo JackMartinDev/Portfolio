@@ -48,15 +48,15 @@ const Experience = ():JSX.Element => {
                 {jobs.map((job,index) => (
                     <div className={cx(classes.jobInfo, { [classes.active]: index === active})}>
                         <h3>      
-                            <span>
+                            <span className={classes.position}>
                                 {job.position}
                             </span>
                             &nbsp;@&nbsp;
-                            <span>
+                            <span className={classes.company}>
                                 {job.company}
                             </span>
                         </h3>
-                        <p>
+                        <p className={classes.dates}>
                             {job.dates}
                         </p>
                         <div>

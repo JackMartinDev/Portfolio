@@ -6,9 +6,14 @@
     margin-bottom: 10px;
 }
 
+.time{
+    color: var(--title-color);
+    font-family: var(--font-mono);
+}
+
 .link{
     text-decoration: none;
-    color: #228be6;
+    color: var(--accent-color)
 }
 
 .link:hover{

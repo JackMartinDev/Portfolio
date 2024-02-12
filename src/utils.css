@@ -7,10 +7,12 @@
     padding-left: 125px;
     padding-right: 125px;
     padding-bottom: 350px;
-    border: 1px solid red;
+    /* Remove this later */
+    border: 1px solid transparent;
 }
 
 .sectionTitle{
+    color: var(--title-color);
     display: flex;
     align-items: center;
     font-size: 2rem;

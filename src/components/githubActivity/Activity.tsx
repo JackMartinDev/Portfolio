@@ -20,7 +20,7 @@ const Activity = ({activity}:Props):JSX.Element => {
                 <p>
                     Repo: <a href={activity.URL} className={classes.link} target="_blank">{activity.repo}</a>
                 </p>
-                <p>{activity.createdAt.toLocaleString()}</p> 
+                <p className={classes.time}>{activity.createdAt.toLocaleString()}</p> 
             </div>
 
             <div className={classes.accordion} onClick={toggle}>

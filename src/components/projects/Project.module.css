@@ -3,21 +3,23 @@
 }
 
 .desc{
-    background-color: blueviolet;
+    background-color: var(--hover-color);
     max-width: 55ch;
     margin-left: auto;
     padding: 12px;
 }
 
 .skills{
+    font-family: var(--font-mono);
     display: flex;
     justify-content: right;
     gap: 1.5rem;
     list-style: none;
 }
 
-.icons{
+.icon{
     text-decoration: none;
+    color: var(--accent-color);
 }
 
 .container{
@@ -27,4 +29,14 @@
 .image{
     position: absolute;
     z-index: -1;
+}
+
+.title{
+    color: var(--accent-color);
+    font-family: var(--font-mono);
+}
+
+.name{
+    color: var(--title-color);
+    font-size: var(--size-4xl);
 }

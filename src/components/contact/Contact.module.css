@@ -3,6 +3,7 @@
 }
 
 .title::before {
+    color: var(--accent-color);
     content: "04.";
     margin-right: 15px;
 }
@@ -17,8 +18,8 @@
 .button{
     text-decoration: none;
     display: inline-block;
-    border: 1px solid black;
-    color: black;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
     padding: 1em;
     border-radius: 4px;
 }

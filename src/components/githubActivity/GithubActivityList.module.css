@@ -3,6 +3,7 @@
 
 .title{
     font-size: 2rem;
+    color: var(--title-color);
 }
 
 .scrollArea{

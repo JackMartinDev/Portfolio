@@ -36,6 +36,7 @@ nav{
     font-size: 14px;
     color: var(--title-color);
     animation: fadeIn 0.6s backwards;
+    transition: color 0.2s;
 }
 
 .link:hover{
@@ -66,7 +67,7 @@ nav{
 }
 
 .lang:hover{
-    background-color: var(--text-color);
+    background-color: var(--hover-color);
 }
 
 .burger{

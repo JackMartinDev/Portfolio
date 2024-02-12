@@ -14,15 +14,15 @@
     min-width: 150px;
     border-top-right-radius: 2px;
     border-bottom-right-radius: 2px;
-    border-left: 2px solid #dee2e6;
+    border-left: 2px solid #233554;
     height: 45px;
 
 }
 
 .link:hover {
     cursor: pointer;
-    background-color: #f8f9fa;
-    transition: background-color 600ms ease;
+    background-color: var(--hover-color);
+    transition: background-color 400ms ease;
 }
 
 .tabs{
@@ -36,7 +36,7 @@
     top: 0;
     width: 2px;
     height: 45px;
-    background-color: red;
+    background-color: var(--accent-color);
     transform: translateY(calc(var(--size) * var(--data-index)));
     transition: transform 0.3s ease;
 
@@ -44,11 +44,12 @@
 
 
 .linkActive {
-    color: #228be6;
+    color: var(--accent-color);
+    font-weight: 500;
 
     &,
     &:hover {
-        background-color: rgba(34,139,230,.1) !important;
+        background-color: var(--hover-color) !important;
     }
 }
 
@@ -68,12 +69,24 @@
 
 .list li::before{
     content: "⇾";
+    color: var(--accent-color);
     position: absolute;
     font-size: 20px;
     left: 0px;
     line-height: 20px;
 }
 
+.position{
+    color: var(--title-color);
+}
+
+.company{
+    color: var(--accent-color);
+}
+
+.dates{
+    color: var(--sub-title-color);
+}
 
 
 @keyframes fadeIn {
@@ -97,6 +110,7 @@
 }
 
 .title::before {
+    color: var(--accent-color);
     content: "02.";
     margin-right: 15px;
 }
