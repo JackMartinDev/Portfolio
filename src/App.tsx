@@ -11,12 +11,12 @@ function App() {
     return (
         <div className={classes.app}>
             <NavigationBar/>
-                <Hero/>
-                <AboutMe/>
-                <Experience/>
-                <Projects/>
-                <Contact/>
-                <GithubActivityList user="JackMartinDev"/>
+            <Hero/>
+            <AboutMe/>
+            <Experience/>
+            <Projects/>
+            <Contact/>
+            <GithubActivityList user="JackMartinDev"/>
         </div>
     )
 }

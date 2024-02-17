@@ -46,7 +46,7 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
     },[])
 
     return(
-        <section className="container">
+        <section className={classes.github}>
             <h3 className={classes.title}>Git Activity</h3>
             <div className={classes.scrollArea}>
                 {gitActivity.map(activity => (<Activity activity={activity}/>))}
