@@ -35,7 +35,6 @@ html {
     scroll-behavior: smooth;
     scroll-padding: 12vh;
 
-    /* For Firefox */
     scrollbar-width: thin;
     scrollbar-color: #495670 #0a192f;
 }
