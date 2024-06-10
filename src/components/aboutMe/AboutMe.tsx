@@ -24,7 +24,7 @@ const AboutMe = ():JSX.Element => {
                     </ul>
                 </div>
                 <div className={classes.image}>
-                    <img src="https://i.stack.imgur.com/34AD2.jpg" alt="Self Image" width={240} height={240}/>
+                    <img src="https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" alt="Self Image" width={240} height={240}/>
                 </div>
             </div>
         </section>

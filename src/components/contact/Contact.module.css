@@ -1,5 +1,7 @@
-.contact{
+section.contact{
     text-align: center;
+    padding-bottom: 0px;
+    min-height: 400px;
 }
 
 .title::before {

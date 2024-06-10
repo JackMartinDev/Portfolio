@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Octokit } from 'octokit'
 import Activity from "./Activity";
 import classes from "./GithubActivityList.module.css"
+import { IconBrandGithub } from '@tabler/icons-react';
 
 type Props = {
     user: string
@@ -36,7 +37,8 @@ const getGithubActivity = async(user:string) =>{
 }
 const GithubActivityList = ({user}:Props):JSX.Element => {
     const [gitActivity, setGitActivity] = useState<TActivity[]>([])
-
+    const [collapsed, setCollapsed] = useState(true);
+    
     useEffect(()=>{
         const fetchData = async() => {
             setGitActivity(await getGithubActivity(user))
@@ -45,13 +47,25 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
 
     },[])
 
+    const toggleCollapseHandler = () => {
+        setCollapsed(!collapsed);
+    }
+
     return(
-        <section className={classes.github}>
-            <h3 className={classes.title}>Git Activity</h3>
-            <div className={classes.scrollArea}>
-                {gitActivity.map(activity => (<Activity activity={activity}/>))}
+        <div className={`${classes.github} ${collapsed ? classes.collapsed : ''}`}>
+            <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+                <h3 className={classes.title}>Git Activity</h3>
+                <a href="https://github.com/JackMartinDev/" target="_blank">
+                    <IconBrandGithub size={40} stroke={1.5} color="#CCD6F6"/>
+                </a>
             </div>
-        </section>
+            <button className={classes.button} onClick={toggleCollapseHandler}>{collapsed ? "▲" : "▼"}</button>
+            {!collapsed && 
+                <div className={classes.scrollArea}>
+                    {gitActivity.map(activity => (<Activity activity={activity}/>))}
+                </div>
+            }
+        </div>
     );
 }
 
