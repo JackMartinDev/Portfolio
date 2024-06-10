@@ -13,6 +13,7 @@
 
 .link{
     text-decoration: none;
+    font-weight: 500;
     color: var(--accent-color)
 }
 
@@ -32,7 +33,6 @@
 }
 
 .accordion:hover{
-    background-color: #f8f9fa;
     cursor: pointer;
 }
 

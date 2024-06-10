@@ -2,7 +2,7 @@
     position: fixed;
     padding: 0px 5px 5px 5px;
     bottom: 0;
-    right: 0;
+    right: 15px;
     width: 450px;
     height: 500px;
     background-color: #0C2441;
@@ -39,7 +39,7 @@
 
 .scrollArea{
     width: 441px;
-    height: 500px;
+    height: 454px;
     overflow-y: scroll;
     padding-right: 3px;
     scrollbar-width: thin;
