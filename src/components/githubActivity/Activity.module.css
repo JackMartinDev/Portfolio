@@ -10,6 +10,9 @@
     color: var(--title-color);
     font-family: var(--font-mono);
 }
+.text{
+    color: var(--title-color);
+}
 
 .link{
     text-decoration: none;
@@ -50,6 +53,7 @@
 
 .list{
     padding-left: 20px;
+    color: var(--title-color);
 }
 
 .icon{
