@@ -9,8 +9,9 @@
     }
 }
 
-.hero{
+section.hero{
     text-align: left;
+    min-height: 100vh;
 }
 
 .title{
