@@ -53,7 +53,7 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
 
     return(
         <div className={`${classes.github} ${collapsed ? classes.collapsed : ''}`}>
-            <div style={{display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+            <div style={{display: "flex", justifyContent: "space-between"}}>
                 <h3 className={classes.title}>Git Activity</h3>
                 <a href="https://github.com/JackMartinDev/" target="_blank">
                     <IconBrandGithub size={40} stroke={1.5} color="#CCD6F6"/>
