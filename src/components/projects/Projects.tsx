@@ -10,6 +10,7 @@ const Projects = ():JSX.Element => {
         <section className={cx(classes.projects, "container")} id="projects">
             <h3 className={cx(classes.title, "sectionTitle")}>{t("projects")}</h3>
             {projects.map(project => (<Project key={project.title} project={project}/>))}
+            <a className={classes.button} href="https://github.com/JackMartinDev" target="_blank">Checkout my github</a>
         </section>
     )
 }

@@ -1,5 +1,7 @@
 section.projects{
     max-width: 1300px;
+    padding-bottom: 250px;
+    text-align: center;
 }
 
 .title::before {
@@ -7,3 +9,13 @@ section.projects{
     content: "03.";
     margin-right: 15px;
 }
+
+.button{
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 1em;
+    border-radius: 4px;
+}
+
