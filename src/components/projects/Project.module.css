@@ -1,11 +1,20 @@
+.project{
+    height: 400px;
+    margin-bottom: 75px;
+}
+
 .details{
     text-align: right;
+    position: relative;
+    padding-top: 60px;
+    z-index: 2;
 }
 
 .desc{
-    background-color: var(--hover-color);
+    background-color: #112240;
     max-width: 55ch;
     margin-left: auto;
+    margin-top: 0.75rem;
     padding: 12px;
 }
 
@@ -13,8 +22,9 @@
     font-family: var(--font-mono);
     display: flex;
     justify-content: right;
-    gap: 1.5rem;
+    gap: 1rem;
     list-style: none;
+    margin-top: 0.75rem;
 }
 
 .icon{
@@ -28,7 +38,8 @@
 
 .image{
     position: absolute;
-    z-index: -1;
+    width: 650px;
+    z-index: 1;
 }
 
 .title{

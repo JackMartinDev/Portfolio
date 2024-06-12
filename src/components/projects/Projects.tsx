@@ -9,9 +9,7 @@ const Projects = ():JSX.Element => {
     return(
         <section className={cx(classes.projects, "container")} id="projects">
             <h3 className={cx(classes.title, "sectionTitle")}>{t("projects")}</h3>
-            <div className={classes.container}>
-                {projects.map(project => (<Project project={project}/>))}
-            </div>
+            {projects.map(project => (<Project key={project.title} project={project}/>))}
         </section>
     )
 }

@@ -46,7 +46,7 @@ const Experience = ():JSX.Element => {
 
 
                 {jobs.map((job,index) => (
-                    <div className={cx(classes.jobInfo, { [classes.active]: index === active})}>
+                    <div key={index} className={cx(classes.jobInfo, { [classes.active]: index === active})}>
                         <h3>      
                             <span className={classes.position}>
                                 {job.position}
@@ -61,7 +61,7 @@ const Experience = ():JSX.Element => {
                         </p>
                         <div>
                             <ul className={classes.list}>
-                                {job.jobDetails.map(item => (<li>{item}</li>))}
+                                {job.jobDetails.map(item => (<li key={item}>{item}</li>))}
                             </ul>
                         </div>
                     </div>

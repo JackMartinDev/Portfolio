@@ -7,14 +7,14 @@ type Props = {
 
 const Project = ({project}: Props) => {
     return(
-        <>
-            <img src="https://i.stack.imgur.com/34AD2.jpg" className={classes.image} alt="" />
+        <div className={classes.project}>
+            <img src={project.image} className={classes.image} alt="" />
             <div className={classes.details}>
                 <p className={classes.title}>Featured Project</p>
                 <h2 className={classes.name}>{project.title}</h2>
                 <p className={classes.desc}>{project.description}</p>
                 <ul className={classes.skills}>
-                    {project.skills.map(skill => (<li>{skill}</li>))}
+                    {project.skills.map(skill => (<li key={skill}>{skill}</li>))}
                 </ul>
                 <a href={project.github} className={classes.icon} target="_blank">
                     <IconBrandGithub size={30} stroke={1.5}/>
@@ -23,7 +23,7 @@ const Project = ({project}: Props) => {
                     <IconExternalLink color="black" size={30} stroke={1.5}/>
                 </a>}
             </div>
-        </>)
+        </div>)
 }
 
 export default Project

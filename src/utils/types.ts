@@ -10,6 +10,7 @@ type commit = {
 }
 
 type TActivity = {
+    id: string,
     repo: string,
     commits: commit[],
     URL: string,
@@ -21,5 +22,6 @@ type Project = {
     description: string,
     skills: string[],
     github: string,
+    image: string,
     url?: string
 }

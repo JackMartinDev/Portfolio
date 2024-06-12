@@ -1,11 +1,11 @@
 import classes from "./AboutMe.module.css"
 import { useTranslation } from "react-i18next"
-
+import cx from 'clsx';
 //<img className={classes.terminal} src="terminal.PNG"/>
 const AboutMe = ():JSX.Element => {
     const {t} = useTranslation()
     return(
-        <section className="container" id="about">    
+        <section className={cx(classes.about, "container")} id="about">    
             <h3 className={`${classes.title} sectionTitle`}>{t("aboutMe")}</h3>
             <div className={classes.aboutContainer}>
                 <div>

@@ -23,6 +23,7 @@ const getGithubActivity = async(user:string) =>{
     res.data.forEach((x => {
         if(x.type === "PushEvent"){
             const activity = {
+                id: x.id,
                 repo: x.repo.name,
                 //@ts-ignore
                 commits: x.payload.commits,
@@ -32,7 +33,6 @@ const getGithubActivity = async(user:string) =>{
             gitActivity.push(activity)
         }
     }))
-    console.log(gitActivity)
     return gitActivity
 }
 const GithubActivityList = ({user}:Props):JSX.Element => {
@@ -62,7 +62,7 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
             <button className={classes.button} onClick={toggleCollapseHandler}>{collapsed ? "▲" : "▼"}</button>
             {!collapsed && 
                 <div className={classes.scrollArea}>
-                    {gitActivity.map(activity => (<Activity activity={activity}/>))}
+                    {gitActivity.map(activity => (<Activity key={activity.id} activity={activity}/>))}
                 </div>
             }
         </div>

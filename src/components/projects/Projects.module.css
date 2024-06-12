@@ -1,36 +1,9 @@
+section.projects{
+    max-width: 1300px;
+}
+
 .title::before {
     color: var(--accent-color);
     content: "03.";
     margin-right: 15px;
-}
-
-.details{
-    text-align: right;
-}
-
-.desc{
-    background-color: blueviolet;
-    max-width: 55ch;
-    margin-left: auto;
-    padding: 12px;
-}
-
-.skills{
-    display: flex;
-    justify-content: right;
-    gap: 1.5rem;
-    list-style: none;
-}
-
-.icons{
-    text-decoration: none;
-}
-
-.container{
-    position: relative;
-}
-
-.image{
-    position: absolute;
-    z-index: -1;
 }

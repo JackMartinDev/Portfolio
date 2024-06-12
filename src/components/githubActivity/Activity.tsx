@@ -9,7 +9,7 @@ type Props = {
 
 const Activity = ({activity}:Props):JSX.Element => {
     const [isToggled, setIsToggled] = useState(false);
-    const commits = activity.commits.map(commit => (<li>{commit.message}</li>))
+    const commits = activity.commits.map(commit => (<li key={commit.sha}>{commit.message}</li>))
 
     const toggle = () => {
         setIsToggled(!isToggled)

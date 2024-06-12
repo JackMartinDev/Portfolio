@@ -1,3 +1,7 @@
+section.experience{
+    max-width: 1000px;
+}
+
 .wrapper{
     display: flex;
     flex-wrap: nowrap;
@@ -100,7 +104,7 @@
 }
 
 .jobInfo{
-    max-width: 50ch;
+    max-width: 60ch;
     display: none;
 }
 
