@@ -11,9 +11,8 @@ const experiences = [
 ]
 
 const jobs = [
-    {company: "Lanex", position: "Software developer", dates: "October - December 2020", jobDetails: experiences[0],},
-    {company: "Lanex2", position: "Software developer2", dates: "October - December 2021", jobDetails: experiences[1]},
-    {company: "Lanex3", position: "Software developer3", dates: "October - December 2022", jobDetails: experiences[2]},
+    {company: "Lanex", position: "Software Engineer/QA", dates: "April 2023 - Present", jobDetails: experiences[0],},
+    {company: "Future Fleet International", position: "Software Engineering Intern", dates: "March - June 2022", jobDetails: experiences[1]},
 ]
 
 const Experience = ():JSX.Element => {

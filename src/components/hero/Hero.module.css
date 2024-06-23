@@ -26,6 +26,7 @@ section.hero{
 
 .name{
     color: var(--title-color);
+    margin-bottom: 0.75rem;
     font-size: clamp(40px, 8vw, 80px);
     line-height: 0.9;
     animation: fadeUp 0.6s backwards; 
@@ -33,7 +34,7 @@ section.hero{
 }
 
 .subtitle{
-    font-size: clamp(40px, 8vw, 80px);
+    font-size: clamp(30px, 8vw, 65px);
     line-height: 0.9;
     margin-bottom: 2rem;
     animation: fadeUp 0.6s backwards; 
@@ -41,7 +42,7 @@ section.hero{
 }
 
 .intro{
-    max-width: 60ch;
+    max-width: 65ch;
     font-size: 1.1rem;
     font-weight: 400;
     animation: fadeUp 0.6s backwards; 

@@ -7,8 +7,8 @@ const Hero = () =>{
         <section className={cx(classes.hero, "container")} id= "hero">
             <h1 className={classes.title}>Hi, my name is</h1>
             <h2 className={classes.name}>Jack Martin</h2>
-            <h3 className={classes.subtitle}>I build things for the web.</h3>
-            <p className={classes.intro}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Modi nemo aliquam dicta tenetur repudiandae harum esse ex assumenda rerum quasi aspernatur, incidunt tempora natus id voluptatem. Consequuntur ullam quos reiciendis at <a className={classes.link} href={t("companyLink")} target="_blank">Lanex</a>.</p>
+            <h3 className={classes.subtitle}>Full Stack Web Developer</h3>
+            <p className={classes.intro}>As a software engineer specializing in full-stack development, I have a passion for building innovative and reliable web applications. Currently, I am helping provide robust web solutions to multiple clients at <a className={classes.link} href={t("companyLink")} target="_blank">Lanex</a>.</p>
         </section>
     )
 }
