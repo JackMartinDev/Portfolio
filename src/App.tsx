@@ -6,16 +6,25 @@ import Experience from './components/experience/Experience'
 import Projects from './components/projects/Projects'
 import Hero from './components/hero/Hero'
 import classes from "./App.module.css"
+import FadeInSection from './components/FadeInSection'
 
 function App() {
     return (
         <div className={classes.app}>
             <NavigationBar/>
             <Hero/>
-            <AboutMe/>
-            <Experience/>
-            <Projects/>
-            <Contact/>
+            <FadeInSection>
+                <AboutMe/>
+            </FadeInSection>
+            <FadeInSection>
+                <Experience/>
+            </FadeInSection>
+            <FadeInSection>
+                <Projects/>
+            </FadeInSection>
+            <FadeInSection>
+                <Contact/>
+            </FadeInSection>
             <GithubActivityList user="JackMartinDev"/>
         </div>
     )
