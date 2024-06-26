@@ -19,6 +19,11 @@ i18next.use(initReactI18next).init({
     interpolation: { escapeValue: false},
 });
 
+//Always display the top of the website on page refresh
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
+
 ReactDOM.createRoot(document.getElementById('root')!).render(
     <React.StrictMode>
             <Suspense fallback="Loading...">
