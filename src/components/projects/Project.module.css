@@ -6,13 +6,13 @@
 .details{
     text-align: right;
     position: relative;
-    padding-top: 60px;
+    padding-top: 20px;
     z-index: 2;
 }
 
 .desc{
     background-color: #112240;
-    max-width: 55ch;
+    max-width: 45ch;
     margin-left: auto;
     margin-top: 0.75rem;
     padding: 12px;
