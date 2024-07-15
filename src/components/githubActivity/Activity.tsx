@@ -7,6 +7,27 @@ type Props = {
     activity: TActivity
 }
 
+const formatDate = (date: Date): string => {
+    const formattedDate = date.toLocaleDateString('en-JP', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    });
+
+    const formattedTime = date.toLocaleTimeString('en-JP', {
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+    });
+
+    return `${formattedDate}, ${formattedTime}`;
+};
+
+const formatRepo = (repo: string) => {
+    const repoParts = repo.split("/");
+    return repoParts[1];
+}
+
 const Activity = ({activity}:Props):JSX.Element => {
     const [isToggled, setIsToggled] = useState(false);
     const commits = activity.commits.map(commit => (<li key={commit.sha}>{commit.message}</li>))
@@ -15,10 +36,6 @@ const Activity = ({activity}:Props):JSX.Element => {
         setIsToggled(!isToggled)
     }
 
-    const formatRepo = (repo: string) => {
-        const repoParts = repo.split("/");
-        return repoParts[1];
-    }
 
     return(
         <div className={classes.container}>
@@ -26,7 +43,7 @@ const Activity = ({activity}:Props):JSX.Element => {
                 <p className={classes.text}>
                     Repo: <a href={activity.URL} className={classes.link} target="_blank">{formatRepo(activity.repo)}</a>
                 </p>
-                <p className={classes.time}>{activity.createdAt.toLocaleString()}</p> 
+                <p className={classes.time}>{formatDate(activity.createdAt)}</p> 
             </div>
 
             <div className={classes.accordion} onClick={toggle}>

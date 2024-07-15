@@ -14,7 +14,7 @@
     padding: 0px 5px 5px 5px;
     bottom: 0;
     right: 15px;
-    width: 450px;
+    width: 400px;
     height: 500px;
     background-color: #0C2441;
     border: solid 2px var(--title-color);
@@ -52,7 +52,7 @@
 }
 
 .scrollArea{
-    width: 441px;
+    width: 391px;
     height: 454px;
     overflow-y: scroll;
     padding-right: 3px;

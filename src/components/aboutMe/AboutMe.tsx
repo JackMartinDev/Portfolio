@@ -9,19 +9,26 @@ const AboutMe = ():JSX.Element => {
         <section className={cx(classes.about, "container")} id="about">    
             <h3 className={`${classes.title} sectionTitle`}>{t("aboutMe")}</h3>
             <div className={classes.aboutContainer}>
-                <div>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit tempore natus assumenda molestias sequi officiis corrupti illo amet qui. Adipisci facere perferendis impedit accusantium. Nesciunt culpa ratione maxime provident modi!
+                <div className={classes.description}>
+                    <p>
+                        Hi, I'm Jack, and I have a passion for building things, especially with computers. My journey began in university where I initially enrolled in an Electrical Engineering degree. However, after taking an introduction to programming class, I discovered my true calling and switched my major to Software Engineering the following semester.
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti quidem aliquam error eaque quia ducimus minus nihil eligendi eius totam. Tempora impedit quos aperiam tempore amet veritatis porro ratione maiores.
+                    <p>
+                        Since then, I've delved into various aspects of programming, such as writing Python scripts and exploring game development. Ultimately, I found my niche in Full Stack Web Development, and it's the path I've decided to pursue ever since.
                     </p>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ad dolores rem, pariatur illo voluptatem sint.</p>
+                    <p>
+                        Lately, I've been dedicating my personal time to developing a local alternative to applications like Postman, called <a className={classes.link} href="https://github.com/JackMartinDev/Yuubin" target="_blank">Yuubin</a>. Feel free to check it out!
+                    </p> 
+                    <p>
+                        Here are some of the technologies I have been using lately:
+                    </p>
                     <ul className={classes.skills}>
-                        <li>Javascript ES6</li>
-                        <li>Typescript</li>
+                        <li>JavaScript ES6</li>
+                        <li>TypeScript</li>
                         <li>React</li>
-                        <li>NodeJs</li>
+                        <li>Node.js</li>
                         <li>React Query</li>
-                        <li>Godot</li>
+                        <li>Tauri</li>
                     </ul>
                 </div>
                 <div className={classes.image}>
