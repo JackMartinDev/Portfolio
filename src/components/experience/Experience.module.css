@@ -133,15 +133,16 @@ section.experience{
     }
 
     .link{
+        min-width: 125px;
         border-left: none;
-        border-bottom: 2px solid #dee2e6;
+        border-bottom: 2px solid #233554;
     }
 
     .selected{
         top: 43px;
-        width: 150px;
+        width: 125px;
         height: 2px;
-        --size: 150px;
+        --size: 125px;
         transform: translateX(calc(var(--size) * var(--data-index)));
 
     }
