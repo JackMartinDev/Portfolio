@@ -11,7 +11,7 @@ const AboutMe = ():JSX.Element => {
             <div className={classes.aboutContainer}>
                 <div className={classes.description}>
                     <p>
-                        Hi, I'm Jack, and I have a passion for building things, especially with computers. My journey began in university where I initially enrolled in an Electrical Engineering degree. However, after taking an introduction to programming class, I discovered my true calling and switched my major to Software Engineering the following semester.
+                        Hi, I have a passion for building things, especially with computers. My journey began in university where I initially enrolled in an Electrical Engineering degree. However, after taking an introduction to programming class, I discovered my true calling and switched my major to Software Engineering the following semester.
                     </p>
                     <p>
                         Since then, I've delved into various aspects of programming, such as writing Python scripts and exploring game development. Ultimately, I found my niche in Full Stack Web Development, and it's the path I've decided to pursue ever since.
