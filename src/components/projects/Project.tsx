@@ -10,7 +10,9 @@ const Project = ({project}: Props) => {
     return(
         <FadeInSection>
             <div className={classes.project}>
-                <img src={project.image} className={classes.image} alt="" />
+                <div className={classes.imageWrapper}>
+                    <img src={project.image} className={classes.image} alt="" />
+                </div>
                 <div className={classes.details}>
                     <p className={classes.title}>Featured Project</p>
                     <h2 className={classes.name}>{project.title}</h2>
