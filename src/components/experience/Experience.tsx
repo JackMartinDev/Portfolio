@@ -4,15 +4,21 @@ import classes from "./Experience.module.css"
 import { useTranslation } from "react-i18next";
 
 const experiences = [
-     ["Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem eaque laboriosam, consequuntur odio illo voluptate nobis ut, animi reprehenderit nemo doloremque harum praesentium architecto voluptas nam! Saepe similique cupiditate vitae?", "Lorem ipsum dolor sit amet consectetur adipisicing elit. In incidunt repudiandae laboriosam odio eaque minima exercitationem voluptates totam non debitis repellendus porro facere, amet rem veniam pariatur obcaecati ut aliquam.",
-     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, illo accusantium perferendis nesciunt numquam ipsa eveniet harum debitis explicabo. Blanditiis ut incidunt dolores sunt temporibus qui, nesciunt eius quam dolorum?", "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quod, voluptatum sapiente. Earum, sint non itaque eum reprehenderit ut enim, numquam a, rem sequi inventore nostrum quo tempora. Quas, labore corrupti."],
-     ["                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore repellat minus minima molestias reiciendis, omnis quod voluptates in sint, repellendus assumenda expedita, quos doloribus. At suscipit sequi delectus! Sed, dolorem!", "Lorem ipsum dolor sit amet consectetur adipisicing elit. Error perspiciatis sunt in quam nulla, totam nemo porro optio dolorem illo ipsa dolor dolores tenetur illum beatae voluptate quo laborum? Nemo?"],
-     ["                Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde distinctio deserunt dolores debitis sed nostrum repellat error voluptatum, esse nihil ipsam qui animi? Quia cum aliquid, autem tempore excepturi labore?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit dolorem natus excepturi? Omnis eius adipisci perferendis sapiente blanditiis quam dignissimos cupiditate ab nisi porro. Aliquid odio quod assumenda labore iure?", "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est necessitatibus eum, non nihil sequi modi perspiciatis? Esse enim voluptate facilis! Mollitia adipisci odit expedita ab eaque, assumenda quo laborum quasi."],
+     [
+        "Enhance user interfaces and experiences for multiple client web applications by analyzing user feedback.",
+        "Perform comprehensive QA testing to maintain software reliability and ensure production-quality code, significantly reducing bugs and enhancing performance.",
+        "Facilitate seamless communication between management and developers by providing Japanese-English interpretation, ensuring clear understanding and collaboration across teams.",
+        "Transform client requirements into precise and actionable specification documents, guiding development teams in delivering tailored software solutions."],
+     [
+        "Designed microcontroller software that integrates Bluetooth Low Energy (BLE) sensors for accurate temperature tracking within cargo trucks", 
+        "Implemented methods to parse and transmit received temperature data via UART serial communication, ensuring reliable data transfer and processing.",
+        "Created detailed software documentation and operation manuals to make it easier for future technicians to use and maintain the system."
+    ]
 ]
 
 const jobs = [
     {company: "Lanex", position: "Software Engineer/QA", dates: "April 2023 - Present", jobDetails: experiences[0],},
-    {company: "Future Fleet International", position: "Software Engineering Intern", dates: "March - June 2022", jobDetails: experiences[1]},
+    {company: "Future Fleet", position: "Software Engineering Intern", dates: "March - June 2022", jobDetails: experiences[1]},
 ]
 
 const Experience = ():JSX.Element => {
