@@ -7,7 +7,7 @@ export const projects = [
     image: "yuubin.PNG"
     },
     {
-    title: "Finance",
+    title: "FinManage",
     description: "A finance manager that can be used to track your financial situation. Track stock prices, subscriptions and bank accont amounts and view a summary on the dashboard.",
     skills: ["React", "Typescript","Node.js", "Tanstack Query"],
     github: "https://github.com/JackMartinDev/FinanceManager",
