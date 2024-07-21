@@ -41,6 +41,7 @@
     display: block;
     width: 100%;
     height: auto;
+    border-radius: 5px;
     transition: opacity 0.3s ease;
 }
 
@@ -63,7 +64,6 @@
 
 .imageWrapper:hover::before {
     opacity: 0;
-    cursor: pointer;
 }
 
 .title{
@@ -78,15 +78,19 @@
 
 @media (max-width: 640px){
     .project{
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         display: grid;
         grid-template-rows: 1fr 1fr;
         grid-template-columns: unset;
-        gap: 5px;
+        gap: 15px;
+    }
+    .imageWrapper {
+        order: 2;
     }
 
     .details{
         text-align: left;
+        order: 1;
     }
 
     .desc{
