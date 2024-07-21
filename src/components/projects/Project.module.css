@@ -1,5 +1,4 @@
 .project{
-    height: 450px;
     margin-bottom: 75px;
     display: grid;
     grid-template-columns: 4fr 2fr;
@@ -23,6 +22,8 @@
 
 .skills{
     font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--title-color);
     display: flex;
     justify-content: right;
     gap: 1rem;

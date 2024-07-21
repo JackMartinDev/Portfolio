@@ -20,7 +20,7 @@ const formatDate = (date: Date): string => {
         hour12: false
     });
 
-    return `${formattedDate}, ${formattedTime}`;
+    return `${formattedDate} ${formattedTime}`;
 };
 
 const formatRepo = (repo: string) => {
