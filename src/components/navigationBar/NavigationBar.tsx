@@ -49,7 +49,7 @@ const NavigationBar = ():JSX.Element => {
         }
 
         return () => {
-            document.body.style.overflow = 'auto'; // Clean up when the component is unmounted
+            document.body.style.overflow = 'auto'; 
         };
     }, [menuOpen]);
 
@@ -60,13 +60,16 @@ const NavigationBar = ():JSX.Element => {
                 <a href="/resume.pdf" target="_blank" type="application/pdf" className={classes.link}>
                     {t("resume")}
                 </a>
-                <button className={classes.lang} onClick={changeLanguage}>
-                    <img 
-                        className={classes.lang__img} 
-                        src={i18next.language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}
-                        aria-label="Toggle language"
-                    />
-                </button>
+                {
+                    //Temp remove until translation is completed
+//                    <button className={classes.lang} onClick={changeLanguage}>
+//                    <img 
+//                        className={classes.lang__img} 
+//                        src={i18next.language === "jp" ? "/icons/GB.png" : "/icons/JP.png"}
+//                        aria-label="Toggle language"
+//                    />
+//                </button>
+                }
             </nav>
             <div className={classes.burger} onClick={() => toggleMenu()}>
                 {menuOpen ? <IconX size={40} /> : <IconMenu2 size={40} />}
