@@ -19,3 +19,9 @@ section.projects{
     border-radius: 4px;
 }
 
+
+@media (max-width: 640px){
+    section.projects{
+        padding-bottom: 75px;
+    }
+}

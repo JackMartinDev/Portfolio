@@ -36,3 +36,13 @@ section.contact{
     color: var(--accent-color);
     border-color: var(--title-color);
 }
+
+
+@media (max-width: 640px){
+    section.contact{
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-width: 475px){
+}

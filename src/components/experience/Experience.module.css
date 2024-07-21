@@ -146,4 +146,8 @@ section.experience{
         transform: translateX(calc(var(--size) * var(--data-index)));
 
     }
+
+    section.experience{
+        padding-bottom: 150px;
+    }
 }

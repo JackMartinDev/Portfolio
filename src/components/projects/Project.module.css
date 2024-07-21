@@ -8,7 +8,6 @@
 .details{
     text-align: right;
     position: relative;
-    padding-top: 20px;
     z-index: 2;
 }
 
@@ -75,4 +74,27 @@
 .name{
     color: var(--title-color);
     font-size: var(--size-4xl);
+}
+
+@media (max-width: 640px){
+    .project{
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: unset;
+        gap: 15px;
+    }
+
+    .details{
+        text-align: left;
+    }
+
+    .desc{
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .skills{
+        justify-content: left;
+    }
 }

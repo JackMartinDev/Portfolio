@@ -14,8 +14,8 @@
     padding: 0px 5px 5px 5px;
     bottom: 0;
     right: 15px;
-    width: 400px;
-    height: 500px;
+    width: 375px;
+    height: 450px;
     background-color: #0C2441;
     border: solid 2px var(--title-color);
     border-bottom: none;
@@ -47,13 +47,13 @@
 }
 
 .title{
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: var(--title-color);
 }
 
 .scrollArea{
-    width: 391px;
-    height: 454px;
+    width: 366px;
+    height: 404px;
     overflow-y: scroll;
     padding-right: 3px;
     scrollbar-width: thin;

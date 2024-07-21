@@ -51,6 +51,10 @@
 }
 
 @media (max-width: 640px){
+    .container{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
 }
 
 @media (max-width: 475px){

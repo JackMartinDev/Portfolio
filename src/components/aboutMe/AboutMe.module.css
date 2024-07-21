@@ -105,6 +105,9 @@ section.about{
 }
 
 @media (max-width: 640px){
+    section.about{
+        padding-bottom: 150px;
+    }
 }
 
 @media (max-width: 475px){
