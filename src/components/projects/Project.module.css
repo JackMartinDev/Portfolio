@@ -76,7 +76,7 @@
     font-size: var(--size-4xl);
 }
 
-@media (max-width: 640px){
+@media (max-width: 768px){
     .project{
         margin-bottom: 20px;
         display: grid;
