@@ -31,8 +31,9 @@ const AboutMe = ():JSX.Element => {
                         <li>Tauri</li>
                     </ul>
                 </div>
-                <div className={classes.image}>
-                    <img src="https://t4.ftcdn.net/jpg/02/15/84/43/360_F_215844325_ttX9YiIIyeaR7Ne6EaLLjMAmy4GvPC69.jpg" alt="Self Image" width={240} height={240}/>
+
+                <div className={classes.imageWrapper}>
+                    <img src="image.jpg" className={classes.image} alt="Self Image" width={420} height={420}/>
                 </div>
             </div>
         </section>
