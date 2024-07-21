@@ -56,7 +56,7 @@ const GithubActivityList = ({user}:Props):JSX.Element => {
             <div style={{display: "flex", justifyContent: "space-between"}}>
                 <h3 className={classes.title}>Git Activity</h3>
                 <a href="https://github.com/JackMartinDev/" target="_blank">
-                    <IconBrandGithub size={40} stroke={1.5} color="#CCD6F6"/>
+                    <IconBrandGithub size={35} stroke={1.5} color="#CCD6F6"/>
                 </a>
             </div>
             <button className={classes.button} onClick={toggleCollapseHandler}>{collapsed ? "▲" : "▼"}</button>
