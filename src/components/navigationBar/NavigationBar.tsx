@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import classes from './NavigationBar.module.css'
 import i18next from 'i18next';
-import { IconMenu2 } from '@tabler/icons-react';
+import { IconMenu2, IconX } from '@tabler/icons-react';
+import { useEffect, useState } from 'react';
 
 const NavigationBar = ():JSX.Element => {
+    const [menuOpen, setMenuOpen] = useState(false);
     const { t } = useTranslation()
 
     const links = [
@@ -17,10 +19,11 @@ const NavigationBar = ():JSX.Element => {
         <a
             key={index}
             href={link.link}
-            className={ classes.link}
+            className={classes.link}
             onClick={(event) => {
                 event.preventDefault();
-                window.location.replace(link.link)
+                setMenuOpen(false);
+                window.location.replace(link.link);
             }}
         >
             <span className={classes.accent}>{`0${index + 1}. `}</span>
@@ -28,15 +31,31 @@ const NavigationBar = ():JSX.Element => {
         </a>
     ));
     
-    const changeLanguage = () =>{
+    const changeLanguage = () => {
         if(i18next.language === "en") {
             i18next.changeLanguage("jp")
         } else i18next.changeLanguage("en")
     }
 
+    const toggleMenu = () => {
+        setMenuOpen(prev => !prev);
+    }
+
+    useEffect(() => {
+        if (menuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+
+        return () => {
+            document.body.style.overflow = 'auto'; // Clean up when the component is unmounted
+        };
+    }, [menuOpen]);
+
     return (
         <header className={classes.header}>
-            <nav className={classes.menu}>
+            <nav className={`${classes.menu} ${menuOpen ? classes.menuOpen : ''}`}>
                 {items}
                 <a href="/resume.pdf" target="_blank" type="application/pdf" className={classes.link}>
                     {t("resume")}
@@ -49,7 +68,10 @@ const NavigationBar = ():JSX.Element => {
                     />
                 </button>
             </nav>
-            <IconMenu2 size={40} className={classes.burger}/>
+            <div className={classes.burger} onClick={() => toggleMenu()}>
+                {menuOpen ? <IconX size={40} /> : <IconMenu2 size={40} />}
+            </div>
+            {menuOpen && <div className={classes.overlay} onClick={() => setMenuOpen(false)} />}
         </header>
     );
 }

@@ -72,6 +72,37 @@ nav{
 
 .burger{
     display: none;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.menuOpen {
+    background-color: #0C2441;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    padding: 1rem;
+    z-index: 4;
+}
+
+.menuOpen .link {
+    padding: 10px 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    z-index: 500;
 }
 
 nav .link:nth-child(1){
