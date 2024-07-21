@@ -77,3 +77,14 @@ section.hero{
   transform: scaleX(1);
 }
 
+@media (max-width: 768px){
+    .title{
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 640px){
+    .title{
+        font-size: 1rem;
+    }
+}
