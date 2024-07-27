@@ -1,6 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import classes from './NavigationBar.module.css'
-import i18next from 'i18next';
+//import i18next from 'i18next';
 import { IconMenu2, IconX } from '@tabler/icons-react';
 import { useEffect, useState } from 'react';
 
@@ -31,11 +31,11 @@ const NavigationBar = ():JSX.Element => {
         </a>
     ));
     
-    const changeLanguage = () => {
-        if(i18next.language === "en") {
-            i18next.changeLanguage("jp")
-        } else i18next.changeLanguage("en")
-    }
+//    const changeLanguage = () => {
+//        if(i18next.language === "en") {
+//            i18next.changeLanguage("jp")
+//        } else i18next.changeLanguage("en")
+//    }
 
     const toggleMenu = () => {
         setMenuOpen(prev => !prev);
